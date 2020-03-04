@@ -1,0 +1,885 @@
+2020-03-02 22:04:29
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+{'batch_size': 8,
+ 'checkpoint_exclude_scopes': None,
+ 'checkpoint_path': '',
+ 'dataset_dir': '/home/dangmai/Desktop/dangmai/pixel_link/ICDAR2015',
+ 'dataset_name': 'icdar2015',
+ 'dataset_split_name': 'train',
+ 'gpu_memory_fraction': -1.0,
+ 'ignore_missing_vars': False,
+ 'learning_rate': 0.001,
+ 'log_every_n_steps': 1,
+ 'max_number_of_steps': 100,
+ 'momentum': 0.9,
+ 'moving_average_decay': 0.9999,
+ 'num_gpus': 1,
+ 'num_preprocessing_threads': 24,
+ 'num_readers': 1,
+ 'train_dir': '/home/dangmai/Desktop/dangmai/pixel_link',
+ 'train_image_height': 512,
+ 'train_image_width': 512,
+ 'using_moving_average': True,
+ 'weight_decay': 0.0001}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/dangmai/Desktop/dangmai/pixel_link/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=8'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=8'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/dangmai/Desktop/dangmai/pixel_link/ICDAR2015/icdar2015_train.tfrecord']
+
+2020-03-02 22:06:49
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+{'batch_size': 81,
+ 'checkpoint_exclude_scopes': None,
+ 'checkpoint_path': '',
+ 'dataset_dir': '/home/dangmai/Desktop/dangmai/pixel_link/ICDAR2015',
+ 'dataset_name': 'icdar2015',
+ 'dataset_split_name': 'train',
+ 'gpu_memory_fraction': -1.0,
+ 'ignore_missing_vars': False,
+ 'learning_rate': 0.001,
+ 'log_every_n_steps': 1,
+ 'max_number_of_steps': 100,
+ 'momentum': 0.9,
+ 'moving_average_decay': 0.9999,
+ 'num_gpus': 1,
+ 'num_preprocessing_threads': 24,
+ 'num_readers': 1,
+ 'train_dir': '/home/dangmai/Desktop/dangmai/pixel_link',
+ 'train_image_height': 512,
+ 'train_image_width': 512,
+ 'using_moving_average': True,
+ 'weight_decay': 0.0001}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/dangmai/Desktop/dangmai/pixel_link/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=81'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=81'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/dangmai/Desktop/dangmai/pixel_link/ICDAR2015/icdar2015_train.tfrecord']
+
+2020-03-02 22:06:58
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+{'batch_size': 1,
+ 'checkpoint_exclude_scopes': None,
+ 'checkpoint_path': '',
+ 'dataset_dir': '/home/dangmai/Desktop/dangmai/pixel_link/ICDAR2015',
+ 'dataset_name': 'icdar2015',
+ 'dataset_split_name': 'train',
+ 'gpu_memory_fraction': -1.0,
+ 'ignore_missing_vars': False,
+ 'learning_rate': 0.001,
+ 'log_every_n_steps': 1,
+ 'max_number_of_steps': 100,
+ 'momentum': 0.9,
+ 'moving_average_decay': 0.9999,
+ 'num_gpus': 1,
+ 'num_preprocessing_threads': 24,
+ 'num_readers': 1,
+ 'train_dir': '/home/dangmai/Desktop/dangmai/pixel_link',
+ 'train_image_height': 512,
+ 'train_image_width': 512,
+ 'using_moving_average': True,
+ 'weight_decay': 0.0001}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/dangmai/Desktop/dangmai/pixel_link/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=1'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=1'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/dangmai/Desktop/dangmai/pixel_link/ICDAR2015/icdar2015_train.tfrecord']
+
+2020-03-02 22:08:36
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+{'batch_size': 1,
+ 'checkpoint_exclude_scopes': None,
+ 'checkpoint_path': '',
+ 'dataset_dir': '/home/dangmai/Desktop/dangmai/pixel_link/ICDAR2015',
+ 'dataset_name': 'icdar2015',
+ 'dataset_split_name': 'train',
+ 'gpu_memory_fraction': -1.0,
+ 'ignore_missing_vars': False,
+ 'learning_rate': 0.001,
+ 'log_every_n_steps': 1,
+ 'max_number_of_steps': 100,
+ 'momentum': 0.9,
+ 'moving_average_decay': 0.9999,
+ 'num_gpus': 1,
+ 'num_preprocessing_threads': 24,
+ 'num_readers': 1,
+ 'train_dir': '/home/dangmai/Desktop/dangmai/pixel_link',
+ 'train_image_height': 512,
+ 'train_image_width': 512,
+ 'using_moving_average': True,
+ 'weight_decay': 0.0001}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/dangmai/Desktop/dangmai/pixel_link/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=1'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=1'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/dangmai/Desktop/dangmai/pixel_link/ICDAR2015/icdar2015_train.tfrecord']
+
+2020-03-02 23:22:01
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+{'batch_size': 8,
+ 'checkpoint_exclude_scopes': None,
+ 'checkpoint_path': '',
+ 'dataset_dir': '/home/dangmai/Desktop/dangmai/pixel_link/ICDAR2015',
+ 'dataset_name': 'icdar2015',
+ 'dataset_split_name': 'train',
+ 'gpu_memory_fraction': -1.0,
+ 'ignore_missing_vars': False,
+ 'learning_rate': 0.001,
+ 'log_every_n_steps': 1,
+ 'max_number_of_steps': 100,
+ 'momentum': 0.9,
+ 'moving_average_decay': 0.9999,
+ 'num_gpus': 1,
+ 'num_preprocessing_threads': 24,
+ 'num_readers': 1,
+ 'train_dir': '/home/dangmai/Desktop/dangmai/pixel_link',
+ 'train_image_height': 512,
+ 'train_image_width': 512,
+ 'using_moving_average': True,
+ 'weight_decay': 0.0001}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/dangmai/Desktop/dangmai/pixel_link/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=8'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=8'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/dangmai/Desktop/dangmai/pixel_link/ICDAR2015/icdar2015_train.tfrecord']
+
+2020-03-02 23:25:03
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+Resume Training from : /home/dangmai/Desktop/dangmai/pixel_link/model.ckpt-0
+{'batch_size': 8,
+ 'checkpoint_exclude_scopes': None,
+ 'checkpoint_path': '',
+ 'dataset_dir': '/home/dangmai/Desktop/dangmai/pixel_link/datasets/ICDAR2015',
+ 'dataset_name': 'icdar2015',
+ 'dataset_split_name': 'train',
+ 'gpu_memory_fraction': -1.0,
+ 'ignore_missing_vars': False,
+ 'learning_rate': 0.001,
+ 'log_every_n_steps': 1,
+ 'max_number_of_steps': 100,
+ 'momentum': 0.9,
+ 'moving_average_decay': 0.9999,
+ 'num_gpus': 1,
+ 'num_preprocessing_threads': 24,
+ 'num_readers': 1,
+ 'train_dir': '/home/dangmai/Desktop/dangmai/pixel_link',
+ 'train_image_height': 512,
+ 'train_image_width': 512,
+ 'using_moving_average': True,
+ 'weight_decay': 0.0001}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/dangmai/Desktop/dangmai/pixel_link/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=8'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=8'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/dangmai/Desktop/dangmai/pixel_link/datasets/ICDAR2015/icdar2015_train.tfrecord']
+
+2020-03-02 23:37:04
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+Resume Training from : /home/dangmai/Desktop/dangmai/pixel_link/model.ckpt-0
+{'batch_size': 8,
+ 'checkpoint_exclude_scopes': None,
+ 'checkpoint_path': '',
+ 'dataset_dir': '/home/dangmai/Desktop/dangmai/pixel_link/datasets/ICDAR2015',
+ 'dataset_name': 'icdar2015',
+ 'dataset_split_name': 'train',
+ 'gpu_memory_fraction': -1.0,
+ 'ignore_missing_vars': False,
+ 'learning_rate': 0.001,
+ 'log_every_n_steps': 1,
+ 'max_number_of_steps': 100,
+ 'momentum': 0.9,
+ 'moving_average_decay': 0.9999,
+ 'num_gpus': 1,
+ 'num_preprocessing_threads': 24,
+ 'num_readers': 1,
+ 'train_dir': '/home/dangmai/Desktop/dangmai/pixel_link',
+ 'train_image_height': 512,
+ 'train_image_width': 512,
+ 'using_moving_average': True,
+ 'weight_decay': 0.0001}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/dangmai/Desktop/dangmai/pixel_link/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=8'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=8'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/dangmai/Desktop/dangmai/pixel_link/datasets/ICDAR2015/icdar2015_train.tfrecord']
+
+2020-03-02 23:37:47
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+Resume Training from : /home/dangmai/Desktop/dangmai/pixel_link/model.ckpt-0
+{'batch_size': 8,
+ 'checkpoint_exclude_scopes': None,
+ 'checkpoint_path': '',
+ 'dataset_dir': '/home/dangmai/Desktop/dangmai/pixel_link/datasets/ICDAR2015',
+ 'dataset_name': 'icdar2015',
+ 'dataset_split_name': 'train',
+ 'gpu_memory_fraction': -1.0,
+ 'ignore_missing_vars': False,
+ 'learning_rate': 0.001,
+ 'log_every_n_steps': 1,
+ 'max_number_of_steps': 100,
+ 'momentum': 0.9,
+ 'moving_average_decay': 0.9999,
+ 'num_gpus': 1,
+ 'num_preprocessing_threads': 24,
+ 'num_readers': 1,
+ 'train_dir': '/home/dangmai/Desktop/dangmai/pixel_link',
+ 'train_image_height': 512,
+ 'train_image_width': 512,
+ 'using_moving_average': True,
+ 'weight_decay': 0.0001}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=1'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/dangmai/Desktop/dangmai/pixel_link/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=8'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=8'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/dangmai/Desktop/dangmai/pixel_link/datasets/ICDAR2015/icdar2015_train.tfrecord']
+
+2020-03-02 23:40:01
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+Resume Training from : /home/dangmai/Desktop/dangmai/pixel_link/model.ckpt-0
+{'batch_size': 8,
+ 'checkpoint_exclude_scopes': None,
+ 'checkpoint_path': '',
+ 'dataset_dir': '/home/dangmai/Desktop/dangmai/pixel_link/datasets/ICDAR2015',
+ 'dataset_name': 'icdar2015',
+ 'dataset_split_name': 'train',
+ 'gpu_memory_fraction': -1.0,
+ 'ignore_missing_vars': False,
+ 'learning_rate': 0.001,
+ 'log_every_n_steps': 1,
+ 'max_number_of_steps': 100,
+ 'momentum': 0.9,
+ 'moving_average_decay': 0.9999,
+ 'num_gpus': 1,
+ 'num_preprocessing_threads': 24,
+ 'num_readers': 1,
+ 'train_dir': '/home/dangmai/Desktop/dangmai/pixel_link',
+ 'train_image_height': 512,
+ 'train_image_width': 512,
+ 'using_moving_average': True,
+ 'weight_decay': 0.0001}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=2'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/dangmai/Desktop/dangmai/pixel_link/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=8'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=8'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/dangmai/Desktop/dangmai/pixel_link/datasets/ICDAR2015/icdar2015_train.tfrecord']
+
+2020-03-02 23:40:53
+
+# =========================================================================== #
+# Training flags:
+# =========================================================================== #
+Resume Training from : /home/dangmai/Desktop/dangmai/pixel_link/model.ckpt-0
+{'batch_size': 8,
+ 'checkpoint_exclude_scopes': None,
+ 'checkpoint_path': '',
+ 'dataset_dir': '/home/dangmai/Desktop/dangmai/pixel_link/datasets/ICDAR2015',
+ 'dataset_name': 'icdar2015',
+ 'dataset_split_name': 'train',
+ 'gpu_memory_fraction': -1.0,
+ 'ignore_missing_vars': False,
+ 'learning_rate': 0.001,
+ 'log_every_n_steps': 1,
+ 'max_number_of_steps': 100,
+ 'momentum': 0.9,
+ 'moving_average_decay': 0.9999,
+ 'num_gpus': 1,
+ 'num_preprocessing_threads': 24,
+ 'num_readers': 1,
+ 'train_dir': '/home/dangmai/Desktop/dangmai/pixel_link',
+ 'train_image_height': 512,
+ 'train_image_width': 512,
+ 'using_moving_average': True,
+ 'weight_decay': 0.0001}
+
+# =========================================================================== #
+# pixel_link net parameters:
+# =========================================================================== #
+'max_expand_scale=2'
+'max_neg_pos_ratio=3'
+'pixel_neighbour_type=PIXEL_NEIGHBOUR_TYPE_8'
+'flip=False'
+'expand_prob=0'
+'num_clones=1'
+"gpus=['/gpu:0']"
+'weight_decay=0.0001'
+'data_format=NHWC'
+'pixel_link_loss_weight=1.0'
+'train_with_ignored=False'
+'text_label=1'
+'image_shape=[512, 512]'
+'min_shorter_side=10'
+'num_neighbours=8'
+"feat_layers=['conv3_3', 'conv4_3', 'conv5_3', 'fc7']"
+'score_map_shape=(128, 128)'
+'min_object_covered=0.1'
+'r_mean=123.0'
+'num_classes=2'
+'g_mean=117.0'
+'feat_fuse_type=cascade_conv1x1_upsample_sum'
+'pixel_cls_loss_weight_lambda=2.0'
+'bbox_crop_overlap=0.2'
+'crop_aspect_ratio_range=(0.5, 2.0)'
+'__file__=/home/dangmai/Desktop/dangmai/pixel_link/config.pyc'
+'decode_method=DECODE_METHOD_join'
+'dropout_ratio=0'
+'batch_size=8'
+'pixel_conf_threshold=0.6'
+'max_shorter_side=inf'
+'pixel_cls_weight_method=PIXEL_CLS_WEIGHT_bbox_balanced'
+'batch_size_per_gpu=8'
+'link_conf_threshold=0.9'
+'__name__=config'
+'bbox_border_width=1'
+'train_image_shape=[512, 512]'
+'min_height=10'
+'using_shorter_side_filtering=True'
+'b_mean=104.0'
+'strides=[4]'
+'min_area=300'
+'background_label=0'
+'rotation_prob=0.5'
+"clone_scopes=['clone_0']"
+'pixel_link_neg_loss_weight_lambda=1.0'
+'pixel_cls_border_weight_lambda=1.0'
+'rgb_mean=[123.0, 117.0, 104.0]'
+'model_type=vgg16'
+'ignore_label=-1'
+'use_rotation=True'
+'area_range=[0.1, 1]'
+
+# =========================================================================== #
+# Training | Evaluation dataset files:
+# =========================================================================== #
+['/home/dangmai/Desktop/dangmai/pixel_link/datasets/ICDAR2015/icdar2015_train.tfrecord']
+
